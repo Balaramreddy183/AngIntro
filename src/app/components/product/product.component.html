@@ -6,9 +6,11 @@
         <span class="price-label">Price:</span>
         <span class="price">{{product.price}}</span>
     </div>
-    <p-rating 
-    [(ngModel)]="product.rating"
-    [readonly]="true"
-    iconCancelClass="hidden"
-    ></p-rating>
+    <p-rating [(ngModel)]="product.rating" [readonly]="true" iconCancelClass="hidden"></p-rating>
 </div>
+<div class="row gap-05">
+    <button type="button" pButton icon="pi pi-pencil" label="Edit" (click)="editProduct()" class="action-btn"></button>
+    <button type="button" pButton icon="pi pi-trash" label="delete" (click)="confirmDelete()" class="p-button-danger" #deleteButton  ></button>
+</div>
+
+<p-confirmPopup></p-confirmPopup>
