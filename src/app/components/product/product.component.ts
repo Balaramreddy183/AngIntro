@@ -3,11 +3,13 @@ import { Product } from '../../../types';
 import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
 
+
+
 @Component({
   selector: 'app-product',
   standalone: true,
   imports: [
-    RatingModule,FormsModule
+    RatingModule,FormsModule,
   ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
