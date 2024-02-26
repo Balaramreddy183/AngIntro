@@ -1,16 +1,20 @@
-<div class="wrapper column gap-1">
-    <img [src]="product.image" alt="product Thumbnail" />
-    <h2 class="title">{{product.name}}</h2>
+<div class="main-bg">
+    <div class="wrapper column gap-1">
+        <img [src]="product.image" alt="product Thumbnail" />
+        <h2 class="title">{{product.name}}</h2>
 
-    <div class="row gap-05">
-        <span class="price-label">Price:</span>
-        <span class="price">{{product.price}}</span>
+        <div class="row gap-05">
+            <span class="price-label">Price:</span>
+            <span class="price">{{truncateName(product.price)}}</span>
+        </div>
+        <p-rating [(ngModel)]="product.rating" [readonly]="true" iconCancelClass="hidden"></p-rating>
     </div>
-    <p-rating [(ngModel)]="product.rating" [readonly]="true" iconCancelClass="hidden"></p-rating>
-</div>
-<div class="row gap-05">
-    <button type="button" pButton icon="pi pi-pencil" label="Edit" (click)="editProduct()" class="action-btn"></button>
-    <button type="button" pButton icon="pi pi-trash" label="delete" (click)="confirmDelete()" class="p-button-danger" #deleteButton  ></button>
+    <div class="row gap-05">
+        <button type="button" pButton icon="pi pi-pencil" label="Edit" (click)="editProduct()"
+            class="action-btn"></button>
+        <button type="button" pButton icon="pi pi-trash" label="delete" (click)="confirmDelete()"
+            class="p-button-danger" #deleteButton></button>
+    </div>
 </div>
 
 <p-confirmPopup></p-confirmPopup>

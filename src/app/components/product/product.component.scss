@@ -1,3 +1,13 @@
+.main-bg {
+    transition: all 1s;
+}
+.main-bg:hover{
+    transform: scale(1.1);
+    
+}
+
+
+
 .wrapper{
     width: 250px;
     img{
@@ -6,7 +16,9 @@
         width: 100%;
         border-radius: 15px;
         background-color: grey;
+       
     }
+   
     .title {
         font-weight: 700;
         font-size: 1.5rem;
